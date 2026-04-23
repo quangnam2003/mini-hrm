@@ -1,0 +1,59 @@
+tìm hiểu dùng wsl2 nó có ảnh hưởng đến gì k, lưu vào đâu 
+- user 
+
+
+--- permission:
++ làm phần gắn/xóa 1 quyền cho nhiều user cùng lúc (done)
++ sửa quyền cho user(done)
++lấy user theo  1 quyền (not done)
+++làm phần quyền theo mảng json theo mã quyền (not done)
+
+
++ lấy danh sách quyền theo module (not done)
+++thêm quyền sắp xếp theo thời gian(done) 
+ 
+---user: 
++ làm bộ filter theo tên, email, empCode, role, is_active (done)
++ lọc những user đang không có trong danh sách cụ thể của module permission(done)
++updatprofile(done)
++ changpassword(done)
+
+
+-----------------------------------------leave_balance-----------------------------
+++ update leave_balance(done)
++ check có chọn reset ngày nghỉ cho người cũ không? (done)
++ người mới vào  = 13 - tháng hiện tại == tổng ngày nghỉ còn lại trong năm(done)
++ nếu có thời gian thì nâng cấp position: tts, chính thức --- tts thì không có nghỉ phép(not done)
++ sửa/xóa hàng loạt 
+
+----------------------------leave_type----------------------------
+++ lấy ra loại nghỉ phép cá nhân
+
+-- -----------------leave_request---------------------------------
+++ đã thêm phần nghỉ cả ngày/ buổi -> có lương, nghỉ ngày/buổi/giờ -> không lương(done)
+
+++ chỉnh sửa status đơn nghỉ hàng loạt của admin
+++ chỉnh sửa logic khi người có quyền duyệt đơn nghỉ thì sẽ không được duyệt chính mình chỉ có amdin mới được duyệt
+ và cả kể người cùng quyền cũng k được duyệt(done)
+
+++ lọc theo ngày/tháng/năm(done)
+
+
+-----------------------------------leave_type--------------------------------------
+++ lấy ra loại nghỉ phép cá nhân(done)
+
+
+---leave
+-
+----------------------------------generate work month--------------------------------------
++gen 3 tháng 1 lần
+
+-----chấm công
+
+
+
+
+
+
+câu hỏi: nếu tôi muốn cấu hình luật mới thì sao nghỉ
+ví dụ như là làm đến t6 nghỉ t7 cn hoặc mặc định làm đến hết t7 cho tất các tuần

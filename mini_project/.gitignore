@@ -1,0 +1,8 @@
+.env
+/docker/
+node_modules/
+vendor/
+.phpunit.result.cache
+.vscode/
+.idea/
+*.log

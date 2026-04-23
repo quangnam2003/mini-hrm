@@ -1,0 +1,166 @@
+@import "tailwindcss";
+
+/* ─── HRM Color Tokens ─── */
+:root {
+  /* Primary — Blue */
+  --primary:         #1B4F8A;
+  --primary-hover:   #2563B0;
+  --primary-tint:    #EAF1FB;
+  --primary-border:  #D0E2F5;
+  --primary-fg:      #FFFFFF;
+
+  /* Background */
+  --bg-page:         #F8F9FB;
+  --bg-surface:      #FFFFFF;
+  --bg-subtle:       #F1F5F9;
+
+  /* Text */
+  --tx-base:         #1A2740;
+  --tx-muted:        #6B7A8D;
+  --tx-subtle:       #9AAABB;
+
+  /* Border */
+  --border:          #E2E8F0;
+  --border-subtle:   #F1F5F9;
+
+  /* Semantic — Success */
+  --success:         #059669;
+  --success-bg:      #F0FDF4;
+  --success-border:  #DCFCE7;
+
+  /* Semantic — Warning */
+  --warning:         #D97706;
+  --warning-bg:      #FFFBEB;
+  --warning-border:  #FEF3C7;
+
+  /* Semantic — Danger */
+  --danger:          #DC2626;
+  --danger-bg:       #FEF2F2;
+  --danger-border:   #FEE2E2;
+}
+
+/* ─── Tailwind v4 Theme Mapping ─── */
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  /* Background utilities: bg-page, bg-surface, bg-subtle, bg-primary, bg-primary-tint */
+  --color-page:           var(--bg-page);
+  --color-surface:        var(--bg-surface);
+  --color-subtle:         var(--bg-subtle);
+  --color-primary:        var(--primary);
+  --color-primary-hover:  var(--primary-hover);
+  --color-primary-tint:   var(--primary-tint);
+  --color-primary-border: var(--primary-border);
+  --color-primary-fg:     var(--primary-fg);
+
+  /* Text utilities: text-base, text-muted, text-subtle */
+  --color-base:           var(--tx-base);
+  --color-muted:          var(--tx-muted);
+  --color-subtle-text:    var(--tx-subtle);
+
+  /* Border utilities: border-line, border-subtle */
+  --color-line:           var(--border);
+  --color-line-subtle:    var(--border-subtle);
+
+  /* Semantic */
+  --color-success:        var(--success);
+  --color-success-bg:     var(--success-bg);
+  --color-success-bd:     var(--success-border);
+
+  --color-warning:        var(--warning);
+  --color-warning-bg:     var(--warning-bg);
+  --color-warning-bd:     var(--warning-border);
+
+  --color-danger:         var(--danger);
+  --color-danger-bg:      var(--danger-bg);
+  --color-danger-bd:      var(--danger-border);
+
+  --color-destructive:    var(--danger);
+  --color-destructive-fg: #FFFFFF;
+
+  --color-primary-foreground: var(--primary-fg);
+}
+
+html {
+  scrollbar-gutter: auto;
+}
+
+/* Custom scrollbar styling for a premium feel */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--tx-subtle) transparent;
+}
+
+/* For Webkit-based browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1; /* Muted gray */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Prevent layout shift on all platforms using overlay where supported */
+@supports (overflow: overlay) {
+  body, [data-slot="sidebar-inset"], main {
+    overflow: overlay;
+  }
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  background-color: var(--bg-page);
+  color: var(--tx-base);
+  font-family: var(--font-geist-sans), Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+@layer base {
+  button {
+    cursor: pointer;
+  }
+}
+
+@layer utilities {
+  .bg-holiday-pattern {
+    background-color: #ffffff;
+    background-image: repeating-linear-gradient(
+      45deg,
+      #f1f5f9 0px,
+      #f1f5f9 10px,
+      #ffffff 10px,
+      #ffffff 20px
+    );
+    background-size: 28px 28px;
+  }
+
+  .bg-holiday-pattern:hover {
+    background-color: #f8fafc;
+    background-image: repeating-linear-gradient(
+      45deg,
+      #e2e8f0 0px,
+      #e2e8f0 10px,
+      #f8fafc 10px,
+      #f8fafc 20px
+    );
+  }
+}
