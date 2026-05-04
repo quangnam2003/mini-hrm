@@ -17,4 +17,4 @@ COPY --from=builder /usr/local/etc/php/conf.d/ /usr/local/etc/php/conf.d/
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
 WORKDIR /var/www
-
+CMD php artisan serve --host=0.0.0.0 --port=8080
